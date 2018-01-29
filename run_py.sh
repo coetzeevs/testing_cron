@@ -15,3 +15,6 @@ echo "in second testing_cron folder"
 
 echo "running script"
 python main.py
+
+echo "deactivating virtualenv"
+deactive
