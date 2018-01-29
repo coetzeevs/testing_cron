@@ -1,4 +1,3 @@
-#!./testing_cron/source/testing_cron/bin/python
 import pandas as pd
 from api_call import *
 import json
