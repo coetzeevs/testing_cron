@@ -1,0 +1,5 @@
+[Service]
+User=movercado
+WorkingDirectory=/opt/oblivion-currency-exchange
+ExecStart=/opt/oblivion-currency-exchange/.venv/bin/python main.py
+RuntimeMaxSec=5min

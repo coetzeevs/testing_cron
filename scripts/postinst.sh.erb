@@ -1,0 +1,15 @@
+#!/bin/sh
+set -e
+
+if [ "$1" = configure ]; then
+    cd /opt/<%= name %>
+    su movercado -c scripts/configure.sh
+    cd -
+fi
+
+if [ -d "/run/systemd/system" ]; then
+    if [ -e "/lib/systemd/system/<%= name %>.timer" ]; then
+        systemctl enable <%= name %>.timer
+        systemctl start <%= name %>.timer || exit $?
+    fi
+fi
